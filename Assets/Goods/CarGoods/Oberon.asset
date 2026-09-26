@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386243a25f3b33b4097bcbba75992988, type: 3}
+  m_Name: Oberon
+  m_EditorClassIdentifier: 
+  _carPrefab: {fileID: 2558205687192933289, guid: 0e88b0125ba976c49a4464b6165ca701,
+    type: 3}
+  _index: 19
+  _price: 0
