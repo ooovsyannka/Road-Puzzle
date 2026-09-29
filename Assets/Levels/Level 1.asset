@@ -51,4 +51,5 @@ MonoBehaviour:
   _timeForLevelInMinute: 1
   _timeForLevelInSeconds: 0
   _winCoinCount: 100
-  _isComplete: 0
+  _isComplete: 1
+  _procentageUnblockingCar: 0.25

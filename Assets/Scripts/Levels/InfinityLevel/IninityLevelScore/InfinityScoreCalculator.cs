@@ -18,7 +18,7 @@ public class InfinityScoreCalculator : MonoBehaviour
     private float _comboMultiple = 0.5f;
     private int _earnedCoin;
 
-    public  int EarnedCoin => _earnedCoin;
+    public int EarnedCoin => _earnedCoin;
     public int Score => _score;
 
     private void OnEnable()
@@ -47,19 +47,17 @@ public class InfinityScoreCalculator : MonoBehaviour
 
         foreach (RoadNode road in roads)
         {
-            foreach (SingleRoad singleRoad in road.SingleRoadHolder.SingleRoads)
-            {
-                if (roadCount > _minRoadCountForCombo)
-                {
-                    comboMultiple += _comboMultiple;
-                }
+            roadCount += road.SingleRoadHolder.SingleRoads.Count;
 
-                score += _scoreMultiple * comboMultiple;
-                roadCount++;
+            if (roadCount > _minRoadCountForCombo)
+            {
+                comboMultiple += _comboMultiple;
             }
+
+            score += _scoreMultiple * comboMultiple;
         }
 
-        if(roadCount >  _minRoadCountForCombo)
+        if (roadCount > _minRoadCountForCombo)
         {
             _comboWindow.Open();
             _comboWindow.SetComboCount(roadCount);

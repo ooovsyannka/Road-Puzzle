@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelCreator.unity
     guid: 6f2b4ccc52e5cba4fa2cd801fbdfeac6
+  - enabled: 1
+    path: Assets/Scenes/LevelCreator.unity
+    guid: 05c42c82c35257c43a74cf244b07224f
+  - enabled: 1
+    path: Assets/Localization/CW/LeanLocalization/Examples/_13_Debug.unity
+    guid: d8268152a4815794a8d19c604b3c8f5c
   m_configObjects: {}

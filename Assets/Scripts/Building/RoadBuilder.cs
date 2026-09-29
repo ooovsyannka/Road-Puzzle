@@ -104,7 +104,7 @@ public class RoadBuilder : MonoBehaviour
             case StartRoad startRoad:
                 AttemptChainCreationOnOccupiedPosition(roadNode, startRoad, startRoad.MergePoint);
                 return;
-            case FinishRoad finishRoad when roadBoundary.Index == finishRoad.Index
+            case FinishRoad finishRoad when roadNode.Index == finishRoad.Index
                                             && !finishRoad.IsConnect
                                             && roadNode.IsConnect
                                             && CanConnectRoad(finishRoad.MergePoint, roadNode):
