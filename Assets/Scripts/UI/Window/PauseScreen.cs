@@ -38,8 +38,8 @@ public class PauseScreen : Window
 
     public override void Open()
     {
-        _restartButton.gameObject.SetActive(true);
-        _homeButton.gameObject.SetActive(true);
+        _restartButton.Open();
+        _homeButton.Open();;
         Time.timeScale = 0;
         _isPause = true;
 
@@ -48,8 +48,8 @@ public class PauseScreen : Window
 
     public override void Close()
     {
-        _restartButton.gameObject.SetActive(false);
-        _homeButton.gameObject.SetActive(false);
+        _restartButton.Close();
+        _homeButton.Close();;
         Time.timeScale = 1;
         _isPause = false;
 

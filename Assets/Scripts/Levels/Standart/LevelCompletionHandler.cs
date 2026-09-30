@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class LevelCompletionHandler : MonoBehaviour
 {
+    private const string NotAllRoadCompleted = nameof(NotAllRoadCompleted);
+    
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private LevelWinHandler _levelWinHandler;
     [SerializeField] private GameOverLeveHandler _gameOverLeveHandler;
@@ -88,7 +90,7 @@ public class LevelCompletionHandler : MonoBehaviour
             }
             else
             {
-                _gameOverLeveHandler.Faild("NotAllRoadCompleted");
+                _gameOverLeveHandler.Faild(NotAllRoadCompleted);
             }
 
             StopLevelProgression();

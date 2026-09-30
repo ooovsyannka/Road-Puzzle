@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Lean.Localization;
 
 public class Timer : MonoBehaviour
 {
+    private const string TimeOver = nameof(TimeOver);
     private const int MaxSecondInMinute = 60;
 
     [SerializeField] private TimerRender _timerRender;
@@ -14,8 +14,6 @@ public class Timer : MonoBehaviour
     private int _currentTimeInMinute;
     private float _currentTimeInSeconds;
     private bool _timeIsOver;
-
-    public bool TimeIsOver => _timeIsOver;
 
     private Coroutine _countdown;
 
@@ -59,7 +57,7 @@ public class Timer : MonoBehaviour
     {
         _currentTimeInMinute = _maxTimeInMinute;
         _currentTimeInSeconds = _maxTimeInSeconds;
-   //     _timerRender.UpdateTimer(_currentTimeInMinute, _currentTimeInSeconds);
+        //     _timerRender.UpdateTimer(_currentTimeInMinute, _currentTimeInSeconds);
 
         while (_currentTimeInMinute > 0 || _currentTimeInSeconds > 0)
         {
@@ -84,7 +82,7 @@ public class Timer : MonoBehaviour
             yield return null;
         }
 
-            TimeIsOvered?.Invoke("TimeOver");
+        TimeIsOvered?.Invoke(TimeOver);
 /*
         if (_currentTimeInMinute == 0 && _currentTimeInSeconds == 0)
         {

@@ -60,9 +60,6 @@ public class CarProductSaver : MonoBehaviour
     {
             float procentageToSave = GetProcentageUnblockingCar() + procentage;
             PlayerPrefs.SetFloat(ProcentageUnblockingCar, procentageToSave);
-        print($"{procentageToSave} procentageToSave");
-        print($"{procentage} procentage" );
-        print($"{GetProcentageUnblockingCar()} GetProcentageUnblockingCar");
     }
 
     public float GetProcentageUnblockingCar()

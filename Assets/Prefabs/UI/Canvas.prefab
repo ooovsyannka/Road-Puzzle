@@ -1211,6 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35764a1adc82be4485fc7bf316fc1e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _windowGroup: {fileID: 0}
   _button: {fileID: 2192834024266166988}
 --- !u!1 &3997856536132835648
 GameObject:
@@ -1704,6 +1705,7 @@ GameObject:
   - component: {fileID: 7119222232200837973}
   - component: {fileID: 1590684047186355288}
   - component: {fileID: 635413048423320785}
+  - component: {fileID: 3199417615088871919}
   m_Layer: 5
   m_Name: HomeButton
   m_TagString: Untagged
@@ -1824,7 +1826,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30b71b0d2176464e990969af5d05a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _windowGroup: {fileID: 3199417615088871919}
   _button: {fileID: 1590684047186355288}
+--- !u!225 &3199417615088871919
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613577641056184862}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4899815136257480743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,6 +2676,7 @@ GameObject:
   - component: {fileID: 2537813627915295303}
   - component: {fileID: 7003480271622268121}
   - component: {fileID: 1682677363780729323}
+  - component: {fileID: 8348758153553028192}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -2781,7 +2797,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7518dad79f928e49bccc5ef6031bb35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _windowGroup: {fileID: 8348758153553028192}
   _button: {fileID: 7003480271622268121}
+--- !u!225 &8348758153553028192
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6937467935387229915}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7090265497207516324
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,6 +3975,7 @@ GameObject:
   - component: {fileID: 131624802325993769}
   - component: {fileID: 5517200680921152599}
   - component: {fileID: 3938045275815475794}
+  - component: {fileID: 5363714558375329252}
   m_Layer: 5
   m_Name: 'AddCoinButton '
   m_TagString: Untagged
@@ -4067,8 +4097,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513a57283690eda4da24757f15638db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _windowGroup: {fileID: 5363714558375329252}
   _button: {fileID: 5517200680921152599}
   _coinShop: {fileID: 0}
+--- !u!225 &5363714558375329252
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525512631899016473}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8580700032492095751
 GameObject:
   m_ObjectHideFlags: 0

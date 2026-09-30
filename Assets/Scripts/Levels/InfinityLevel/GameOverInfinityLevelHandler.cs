@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class GameOverInfinityLevelHandler : MonoBehaviour
 {
+    private const string PlaceOver = nameof(PlaceOver);
+    
     [SerializeField] private RoadDrager _roadDrager;
     [SerializeField] private EndGameScreen _endGameScreen;
     [SerializeField] private GiveUpButton _giveUpButton;
@@ -52,7 +54,7 @@ public class GameOverInfinityLevelHandler : MonoBehaviour
 
         if (_grid.IsFull == false)
         {
-            FinishGame("PlaceOver");
+            FinishGame(PlaceOver);
             _timer.StopCountdown();
         }
     }

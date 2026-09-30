@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class ActionButton : MonoBehaviour
+public abstract class ActionButton : Window
 {
     [SerializeField] private Button _button;
 

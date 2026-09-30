@@ -1,4 +1,5 @@
 ﻿using IJunior.TypedScenes;
+using UnityEngine;
 
 public class RestartButton : ActionButton
 {

@@ -22,17 +22,17 @@ public class EndGameScreen : Window
     public override void Close()
     {
         base.Close();
-        _restartButton.gameObject.SetActive(false);
-        _homeButton.gameObject.SetActive(false);
-        _addCoinButton.gameObject.SetActive(false);
+        _restartButton.Close();
+        _homeButton.Close();
+        _addCoinButton.Close();
     }
 
     public override void Open()
     {
         base.Open();
-        _restartButton.gameObject.SetActive(true);
-        _homeButton.gameObject.SetActive(true);
-        _addCoinButton.gameObject.SetActive(true);
+        _restartButton.Open();
+        _homeButton.Open();
+        _addCoinButton.Open();
     }
 
     public void ShowLoosInfo(string textFinishGame)
