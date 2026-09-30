@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
+using Lean.Localization;
 using UnityEngine;
 
-public class GameOverHandler : MonoBehaviour
+public class GameOverInfinityLevelHandler : MonoBehaviour
 {
     [SerializeField] private RoadDrager _roadDrager;
     [SerializeField] private EndGameScreen _endGameScreen;
@@ -10,7 +11,7 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] private InfinityScoreCalculator _infinityScoreCalculator;
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private WalletSaver _walletSaver;
-
+    
     private Chains _chains;
     private Grid _grid;
     private Timer _timer;
@@ -51,7 +52,8 @@ public class GameOverHandler : MonoBehaviour
 
         if (_grid.IsFull == false)
         {
-            FinishGame("Закончилось Место");
+            FinishGame("PlaceOver");
+            _timer.StopCountdown();
         }
     }
 

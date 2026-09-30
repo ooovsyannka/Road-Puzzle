@@ -48,8 +48,8 @@ MonoBehaviour:
     _hintImage: {fileID: 21300000, guid: e64995f22c86a3b43845b06baa733398, type: 3}
     _cost: 0
   _timeOfDay: 0
-  _timeForLevelInMinute: 1
-  _timeForLevelInSeconds: 0
+  _timeForLevelInMinute: 0
+  _timeForLevelInSeconds: 5
   _winCoinCount: 100
-  _isComplete: 1
+  _isComplete: 0
   _procentageUnblockingCar: 0.25

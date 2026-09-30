@@ -20,7 +20,7 @@ public class HintPurchaseHandler : MonoBehaviour
 
     public void Initialize(Wallet wallet, LevelData levelData)
     {
-        
+        _wallet = wallet;
         _hint.SetCost(levelData.HintSelection.Cost);
         _hint.SetSprite(levelData.HintSelection.HintImage);
     }

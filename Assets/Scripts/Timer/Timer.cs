@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Lean.Localization;
 
 public class Timer : MonoBehaviour
 {
@@ -83,7 +84,7 @@ public class Timer : MonoBehaviour
             yield return null;
         }
 
-            TimeIsOvered?.Invoke("ВРЕМЯ ВЫШЛО!");
+            TimeIsOvered?.Invoke("TimeOver");
 /*
         if (_currentTimeInMinute == 0 && _currentTimeInSeconds == 0)
         {

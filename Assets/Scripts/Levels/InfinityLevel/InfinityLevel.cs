@@ -9,7 +9,7 @@ public class InfinityLevel : MonoBehaviour
     [SerializeField] private CarSpawner _carSpawner;
     [SerializeField] private LightCycle _lightCycle;
     [SerializeField] private RoadBuilder _roadBuilder;
-    [SerializeField] private GameOverHandler _gameOverHandler;
+    [SerializeField] private GameOverInfinityLevelHandler gameOverInfinityLevelHandler;
     [SerializeField] private List<UniversalRoadBoundary> _universalRoadNodes;
     [SerializeField] private RoadBoundaryRandomizer _roadBoundaryRandomizer;
     [SerializeField] private BonusCollectionHandler _bonusCollectionHandler;
@@ -22,7 +22,7 @@ public class InfinityLevel : MonoBehaviour
     private void Awake()
     {
         _carSpawner.InstalSelectedCar();
-        _gameOverHandler.Initialize(_chains, _grid, _timer, _bonusCollectionHandler);
+        gameOverInfinityLevelHandler.Initialize(_chains, _grid, _timer, _bonusCollectionHandler);
         _bonusCollectionHandler.Initialize(_grid, _timer);
         _roadBoundaryRandomizer.Initialize(_universalRoadNodes);
     }

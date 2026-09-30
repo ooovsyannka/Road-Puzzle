@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using Lean.Localization;
+using TMPro;
 using UnityEngine;
 
 public class EndGameScreen : Window
@@ -36,6 +37,6 @@ public class EndGameScreen : Window
 
     public void ShowLoosInfo(string textFinishGame)
     {
-        _finishGameText.text = textFinishGame;
+        _finishGameText.text = LeanLocalization.GetTranslationText(textFinishGame);
     }
 }

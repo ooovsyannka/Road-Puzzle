@@ -6,6 +6,6 @@ public class GiveUpButton : ActionButton
 
     protected override void OnButtonAction()
     {
-        OnGiveUp?.Invoke("ВЫ СДАЛИСЬ");
+        OnGiveUp?.Invoke("GiveUp");
     }
 }

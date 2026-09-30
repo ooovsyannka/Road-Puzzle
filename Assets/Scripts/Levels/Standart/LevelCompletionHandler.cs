@@ -24,7 +24,7 @@ public class LevelCompletionHandler : MonoBehaviour
         List<RoadNode> roads)
     {
         _levelWinHandler.Initialize(levelData);
-        _gameOverLeveHandler.Initialize(levelData);
+        _gameOverLeveHandler.Initialize(levelData,_inputReader);
         _roads = roads;
         _startRoads = startRoads;
         _finishRoads = finishRoads;
@@ -88,7 +88,7 @@ public class LevelCompletionHandler : MonoBehaviour
             }
             else
             {
-                _gameOverLeveHandler.Faild("НЕ ВСЕ ДОРОГИ СОЕДЕНЕННЫ!");
+                _gameOverLeveHandler.Faild("NotAllRoadCompleted");
             }
 
             StopLevelProgression();

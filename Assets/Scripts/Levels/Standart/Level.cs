@@ -12,6 +12,7 @@ public class Level : MonoBehaviour
     [SerializeField] private LevelCompletionHandler _levelCompletionHandler;
     [SerializeField] private LevelInfoBar _levelInfoBar;
     [SerializeField] private float _carPositionY = 5;
+    [SerializeField] private HintPurchaseHandler _hintPurchaseHandler;
 
     private List<StartRoad> _startRoads;
     private List<FinishRoad> _finishRoads;
@@ -38,6 +39,7 @@ public class Level : MonoBehaviour
         InitializeStartRoads();
         InitializeFinishRoads();
         InitializeRoadNodes();
+        _hintPurchaseHandler.Initialize(_wallet, _currentLevelData) ;
     }
 
     private void InitializeStartRoads()
