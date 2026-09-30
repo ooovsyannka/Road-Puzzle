@@ -15,12 +15,24 @@ public class CarContainersHolder : MonoBehaviour
     
     private void Awake()
     {
+        var carProducts = new List<CarProduct>(_carContainers.Count);
+        foreach (CarContainer carContainer in _carContainers)
+        {
+            if (carContainer != null && carContainer.CarProduct != null)
+                carProducts.Add(carContainer.CarProduct);
+        }
+
+        _carProductSaver.RegisterGiftProducts(carProducts);
+
         int index = 0;
 
         foreach (CarContainer carContainer in _carContainers)
         {
             carContainer.CarInfo.UpdateLockImage(_carProductSaver.IsCarBought(carContainer.CarProduct));
             carContainer.CarInfo.UpdateSelectImage(_carProductSaver.IsCarSelected(carContainer.CarProduct));
+
+            if (carContainer.CarProduct is CarGift carGift && carContainer.CarInfo is CarGifrInfo carGiftInfo)
+                carGiftInfo.UpdateSlider(_carProductSaver.GetGiftCarProgress(carGift));
 
             carContainer.CarGoodsInfoShowed += SetCurrentCarContainer;
             carContainer.SetIndex(index);

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _carPrefab: {fileID: 5836188339440660642, guid: 252a9b413d3c6f64484bb24ae076f84a,
     type: 3}
-  _index: 17
-  _price: 0
+  _index: 22
+  _price: 470

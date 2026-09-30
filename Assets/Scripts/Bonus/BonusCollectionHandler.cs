@@ -42,7 +42,7 @@ public class BonusCollectionHandler : MonoBehaviour
 
     private void CollectClock(Clock clock, int timeCount)
     {
-        _timer.AddMinute(timeCount);
+        _timer.AddSecond(timeCount);
         clock.OnCollected -= CollectClock;
     }
 }

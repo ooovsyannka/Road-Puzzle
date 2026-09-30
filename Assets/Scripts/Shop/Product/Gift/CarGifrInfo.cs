@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEditor;
 
 public class CarGifrInfo : CarInfo
 {
@@ -10,7 +9,8 @@ public class CarGifrInfo : CarInfo
 
     public void UpdateSlider(float completedProcent)
     {
+        completedProcent = Mathf.Clamp01(completedProcent);
         _slider.value = completedProcent;
-        _procentage.text = completedProcent.ToString();
+        _procentage.text = $"{Mathf.RoundToInt(completedProcent * 100f)}%";
     }
 }

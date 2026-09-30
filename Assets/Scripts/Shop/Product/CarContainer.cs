@@ -38,27 +38,8 @@ public class CarContainer : MonoBehaviour
 
     private void Start()
     {
-        switch (_carInfo)
-        {
-            case CarGifrInfo carGifrInfo:
-            {
-                if (_carProduct is CarGift carGift)
-                {
-                    carGifrInfo.UpdateSlider(carGift.CompletedProcent);
-                }
-
-                break;
-            }
-            case CarGoodsInfo carGoodsInfo:
-            {
-                if (_carProduct is CarGoods carGoods)
-                {
-                    carGoodsInfo.UpdateCarPrice(carGoods);
-                }
-
-                break;
-            }
-        }
+        if (_carInfo is CarGoodsInfo carGoodsInfo && _carProduct is CarGoods carGoods)
+            carGoodsInfo.UpdateCarPrice(carGoods);
 
         _carInfo.UpdateInfo(_carProduct.Name, _carProduct.Speed.ToString());
     }
@@ -143,3 +124,4 @@ public class CarContainer : MonoBehaviour
         }
     }
 }
+

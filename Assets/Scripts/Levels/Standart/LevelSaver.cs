@@ -9,7 +9,7 @@ public class LevelSaver : MonoBehaviour
     private const string LevelIndex = nameof(LevelIndex);
     private const int NumberCompletedLevel = 1;
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKeyUp(KeyCode.L))
         {
@@ -20,7 +20,7 @@ public class LevelSaver : MonoBehaviour
 
             print("Уровни почищенны");
         }
-    }
+    }*/
 
     public void SaveLevel(LevelData levelData)
     {

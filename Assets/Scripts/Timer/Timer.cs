@@ -24,9 +24,9 @@ public class Timer : MonoBehaviour
         _timeIsOver = false;
     }
 
-    public void AddMinute(int desiredMinute)
+    public void AddSecond(int desiredMinute)
     {
-        _currentTimeInMinute += desiredMinute;
+        _currentTimeInSeconds += desiredMinute;
         _timeIsOver = false;
     }
 
@@ -57,7 +57,6 @@ public class Timer : MonoBehaviour
     {
         _currentTimeInMinute = _maxTimeInMinute;
         _currentTimeInSeconds = _maxTimeInSeconds;
-        //     _timerRender.UpdateTimer(_currentTimeInMinute, _currentTimeInSeconds);
 
         while (_currentTimeInMinute > 0 || _currentTimeInSeconds > 0)
         {

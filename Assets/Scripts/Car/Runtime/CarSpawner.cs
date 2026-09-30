@@ -8,6 +8,11 @@ public class CarSpawner : MonoBehaviour
 
     private Spawner<Car> _spawner;
 
+    private void Awake()
+    {
+        _carProductSaver.RegisterGiftProducts(_carProducts);
+    }
+
     public void InstalSelectedCar()
     {
         List<Car> _carPrefabs = new List<Car>();
@@ -21,12 +26,14 @@ public class CarSpawner : MonoBehaviour
         }
 
         _spawner = new Spawner<Car>(_carPrefabs);
+
+        Debug.Log($"{_carPrefabs.Count} objects spawned in CarSpawner");
     }
 
-    public Car GetRandomCar(Vector3 carPosition,  Quaternion rotation,  TimeOfDay timeOfDay)
+    public Car GetRandomCar(Vector3 carPosition, Quaternion rotation, TimeOfDay timeOfDay)
     {
         Car car = _spawner.SpawnObjectFromList(carPosition);
-        
+
         car.transform.rotation = rotation;
         car.UpdateHeadlightsBasedOnTime(timeOfDay);
         car.Died += ReturnCarInPool;

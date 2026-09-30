@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 8675355745157099935}
   - component: {fileID: 7655229079955926421}
   m_Layer: 0
-  m_Name: CoinRain
+  m_Name: SparkRain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5294,9 +5294,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f1d10676c77e94798b982779a3d3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bonusCount: 1
+  _bonusCount: 30
   _bonusAnimation: {fileID: 660533584534770762}
-  _particleSystem: {fileID: 0}
+  _particleSystem: {fileID: 8675355745157099935}
 --- !u!1 &8267465144113611585
 GameObject:
   m_ObjectHideFlags: 0

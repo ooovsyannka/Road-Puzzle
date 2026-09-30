@@ -94,16 +94,15 @@ public class Shop : MonoBehaviour
 
         _contentRectTransform.anchoredPosition = targetPosition;
 
-        if (carContainer.CarProduct is CarGoods carGoods)
+        CarProduct carProduct = _currentCarContainer.CarProduct;
+        
+        if (_carProductSaver.IsCarBought(carProduct) == false)
         {
-            if (_carProductSaver.IsCarBought(carGoods) == false)
-            {
-                _buyCarButton.gameObject.SetActive(true);
-            }
-            else
-            {
-                _selectCarButton.gameObject.SetActive(true);
-            }
+            _buyCarButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            _selectCarButton.gameObject.SetActive(true);
         }
     }
 }

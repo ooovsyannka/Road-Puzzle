@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 8905515623747745381}
   - component: {fileID: 3910456550109394686}
   m_Layer: 0
-  m_Name: CoinRain
+  m_Name: SparkRain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

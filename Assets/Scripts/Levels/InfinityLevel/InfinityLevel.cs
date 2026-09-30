@@ -13,7 +13,7 @@ public class InfinityLevel : MonoBehaviour
     [SerializeField] private List<UniversalRoadBoundary> _universalRoadNodes;
     [SerializeField] private RoadBoundaryRandomizer _roadBoundaryRandomizer;
     [SerializeField] private BonusCollectionHandler _bonusCollectionHandler;
-    [SerializeField] private int _startLevelTime = 1;
+    [SerializeField] private int _startLevelTime = 3;
 
     private bool _carIsMoving;
     private IStartRoad _currentStartRodNode;

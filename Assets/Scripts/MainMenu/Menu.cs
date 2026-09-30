@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private Wallet _wallet;
     [SerializeField] private MenuRender _menuRender;
     [SerializeField] private Grid _infinityLevelGrid;
-    
+
     private bool _canLoadScene;
     private LevelData _currentLevel;
 
@@ -29,10 +29,11 @@ public class Menu : MonoBehaviour
         _infinityButton.onClick.AddListener(LaunchInfinityLevel);
         _shopButton.onClick.AddListener(OpenShop);
 
-        if(_levelHolder.TryGetLevelByIndex(out LevelData levelData))//if (_levelHolder.TryGetLevelBySaver(out LevelData levelData))
+        //if(_levelHolder.TryGetLevelByIndex(out LevelData levelData))
+        if (_levelHolder.TryGetLevelBySaver(out LevelData levelData))
         {
             _currentLevel = levelData;
-            _menuRender.ShowLevelNumber(_currentLevel.Index );
+            _menuRender.ShowLevelNumber(_currentLevel.Index);
         }
         else
         {

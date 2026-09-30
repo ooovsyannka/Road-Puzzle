@@ -1084,6 +1084,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 479970478}
     m_Modifications:
+    - target: {fileID: 1454023872988791443, guid: f0c5de3d85da0f04d95bd4f2de5e0570,
+        type: 3}
+      propertyPath: DefaultCarProduct
+      value: 
+      objectReference: {fileID: 11400000, guid: b5ec1e6c0f3806040a46b51314ce4f5d,
+        type: 2}
+    - target: {fileID: 1454023872988791443, guid: f0c5de3d85da0f04d95bd4f2de5e0570,
+        type: 3}
+      propertyPath: carContainers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3034978709069351455, guid: f0c5de3d85da0f04d95bd4f2de5e0570,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2780,7 +2791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _endGameScreen: {fileID: 7301200589341962313}
-  _hintPurchaseHandler: {fileID: 0}
+  _hintPurchaseHandler: {fileID: 1065110319}
 --- !u!4 &2007635484
 Transform:
   m_ObjectHideFlags: 0

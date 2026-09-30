@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Lean.Localization;
 using UnityEngine;
 
 public class GameOverInfinityLevelHandler : MonoBehaviour

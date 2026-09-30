@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Dreamteck.Utilities;
 using UnityEngine;
 
 public class ObjectPool<T> where T : MonoBehaviour
@@ -16,12 +17,17 @@ public class ObjectPool<T> where T : MonoBehaviour
     {
         _prefabs = prefabs;
 
+        prefabs.Shuffle();
+        
         foreach (T prefas in prefabs)
         {
             T currentObject = Object.Instantiate(prefas);
             currentObject.gameObject.SetActive(false);
             _pool.Enqueue(currentObject);
         }
+        
+        
+        Debug.Log($"{_pool.Count} objects spawned In Pool");
     }
 
     public T GetObject(Transform parent)
