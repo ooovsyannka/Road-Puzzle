@@ -64,7 +64,7 @@ public class GameOverInfinityLevelHandler : MonoBehaviour
             _endGameScreen.Open();
             _endGameScreen.ShowLoosInfo(argumet);
             _infinityScoreCalculator.ShowTotalResult(_bonusCollectionHandler.CollectedCoins);
-            _walletSaver.AddCoinInSave(_infinityScoreCalculator.EarnedCoin);
+            _walletSaver.ChangeCoinInSave(_infinityScoreCalculator.EarnedCoin);
             _inputReader.StopReadInput();
         }
         else

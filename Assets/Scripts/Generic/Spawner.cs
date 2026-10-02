@@ -14,8 +14,6 @@ public class Spawner<T> where T : MonoBehaviour
     public Spawner(List<T> prefabs)
     {
         _pool = new ObjectPool<T>(prefabs);
-        
-        Debug.Log($"{prefabs.Count} objects spawned in Spawner");
     }
 
     public T Spawn(Vector3 spawnPosition, Transform parent)

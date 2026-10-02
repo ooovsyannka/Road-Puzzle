@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/PluginYourGames/Example/Scenes/ExampleYG2.unity
     guid: e49bf7e58fdb4db4c9df51f0ddb8f327
   - enabled: 1
-    path: Assets/Scenes/LevelScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 436b72d0cb11ddc4ea10e723a247d7be
+  - enabled: 1
+    path: Assets/Scenes/LevelScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Infinity.unity
     guid: df83099eab19cf54caa8d851975c658d

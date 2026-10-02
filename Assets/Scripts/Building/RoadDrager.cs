@@ -33,9 +33,27 @@ public class RoadDrager : MonoBehaviour
         _reader.RoadDropAttempt += TryDragOver;
     }
 
+    private void OnDisable()
+    {
+        _reader.RoadPickupAttempt -= TryGetRoad;
+        _reader.RoadDropAttempt -= TryDragOver;
+    }
+
     public void SetGrid(Grid grid)
     {
         _grid = grid;
+    }
+    
+    public void EnableDragRoad()
+    {
+        _reader.RoadPickupAttempt += TryGetRoad;
+        _reader.RoadDropAttempt += TryDragOver;
+    }
+
+    public void DisableDragRoad()
+    {
+        _reader.RoadPickupAttempt -= TryGetRoad;
+        _reader.RoadDropAttempt -= TryDragOver;
     }
 
     private void TryGetRoad()
@@ -142,7 +160,6 @@ public class RoadDrager : MonoBehaviour
                         _preview.ShowPreviwPosition(previewPosition);
                     }
                 }
-
             }
             else
             {

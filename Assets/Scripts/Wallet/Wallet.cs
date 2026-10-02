@@ -14,7 +14,7 @@ public class Wallet : MonoBehaviour
         LoadCoinsFromSave();
         ShowWalletCount();
     }
-    
+
     public void AddCoin(int count)
     {
         LoadCoinsFromSave();
@@ -56,9 +56,12 @@ public class Wallet : MonoBehaviour
     {
         _countCoin = _walletSaver.LoadCoins();
     }
-    
+
     private void SaveCoinsInSaver()
     {
         _walletSaver.TrySaveCoinInWalet(_countCoin);
     }
 }
+
+
+

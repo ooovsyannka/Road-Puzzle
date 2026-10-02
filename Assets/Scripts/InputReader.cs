@@ -22,12 +22,11 @@ public class InputReader : MonoBehaviour
         _canReadInput = true;
     }
 
-
     private void Update()
     {
-        if (_canReadInput == false) 
+        if (_canReadInput == false)
             return;
-        
+
         if (Input.GetMouseButtonDown(0))
         {
             RoadPickupAttempt?.Invoke();
@@ -44,7 +43,7 @@ public class InputReader : MonoBehaviour
 
     public void StopReadInput()=>
         _canReadInput = false;
-    
+
     private Ray GetRayByMousePsition() =>
                                      _camera.ScreenPointToRay(Input.mousePosition);
 }

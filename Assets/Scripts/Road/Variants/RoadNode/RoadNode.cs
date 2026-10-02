@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System;
-using UnityEngine.Serialization;
 
 public class RoadNode : MonoBehaviour
 {
     [SerializeField] private RoadMover _mover;
-    [FormerlySerializedAs("_roadType")] [SerializeField] private RoadNodeType roadNodeType;
+    [SerializeField] private RoadNodeType roadNodeType;
     [SerializeField] private RoadPreview _preview;
     [SerializeField] private MergePointHolder _mergePointHolder;
     [SerializeField] private SingleRoadHolder _singleRoadHolder;
@@ -87,3 +86,5 @@ public class RoadNode : MonoBehaviour
         preview.transform.SetParent(_preview.transform);
     }
 }
+
+

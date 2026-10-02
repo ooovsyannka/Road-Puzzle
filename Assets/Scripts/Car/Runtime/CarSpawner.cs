@@ -26,8 +26,6 @@ public class CarSpawner : MonoBehaviour
         }
 
         _spawner = new Spawner<Car>(_carPrefabs);
-
-        Debug.Log($"{_carPrefabs.Count} objects spawned in CarSpawner");
     }
 
     public Car GetRandomCar(Vector3 carPosition, Quaternion rotation, TimeOfDay timeOfDay)

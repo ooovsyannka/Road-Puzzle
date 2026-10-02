@@ -15,6 +15,11 @@ public class RoadRotation : MonoBehaviour
     {
         _initialLocalRotation = transform.localRotation;
     }
+    
+    public  void ChangeInitialRotation(Quaternion newRotation)
+    {
+        _initialLocalRotation = newRotation;
+    }
 
     public void SetRotation(Vector3 hitPoint)
     {

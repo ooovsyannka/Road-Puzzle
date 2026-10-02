@@ -7,12 +7,12 @@ public abstract class ActionButton : Window
 
     public Button Button =>  _button;
 
-    private void OnEnable()
+    protected void OnEnable()
     {
         _button.onClick.AddListener(OnButtonAction);
     }
 
-    private void OnDisable()
+    protected void OnDisable()
     {
         _button.onClick.RemoveListener(OnButtonAction);
     }

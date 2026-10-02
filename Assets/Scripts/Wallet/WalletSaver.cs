@@ -21,7 +21,7 @@ public class WalletSaver : MonoBehaviour
         }
     }
 
-    public void AddCoinInSave(int desiredCount)
+    public void ChangeCoinInSave(int desiredCount)
     {
         if (IsCorrectCount(desiredCount))
         {

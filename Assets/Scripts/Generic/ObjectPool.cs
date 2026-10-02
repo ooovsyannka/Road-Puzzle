@@ -27,7 +27,6 @@ public class ObjectPool<T> where T : MonoBehaviour
         }
         
         
-        Debug.Log($"{_pool.Count} objects spawned In Pool");
     }
 
     public T GetObject(Transform parent)
