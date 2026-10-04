@@ -9,7 +9,7 @@ public class RoadNode : MonoBehaviour
     [SerializeField] private MergePointHolder _mergePointHolder;
     [SerializeField] private SingleRoadHolder _singleRoadHolder;
     [SerializeField] private RoadRotation _roadRotation;
-
+    
     private int _index;
     private bool _canDrag;
     public bool _isConnect;

@@ -29,6 +29,11 @@ public class WalletSaver : MonoBehaviour
         }
     }
 
+    public bool HasEnoughCoins(int count)
+    {
+        return LoadCoins() > count;
+    }
+
     public int LoadCoins() =>
         PlayerPrefs.GetInt(CoinSave);
 

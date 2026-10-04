@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2816119586269705960}
   - component: {fileID: 6669103067313334501}
   - component: {fileID: 1446913428119254879}
+  - component: {fileID: 4047221392320981382}
+  - component: {fileID: 1335293585523565178}
   m_Layer: 0
   m_Name: 'Road '
   m_TagString: Untagged
@@ -50,11 +52,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mover: {fileID: 6669103067313334501}
-  _roadType: 0
+  roadNodeType: 0
   _preview: {fileID: 5477408005626373025}
   _mergePointHolder: {fileID: 6318260058526381033}
   _singleRoadHolder: {fileID: 5462844926498264237}
   _roadRotation: {fileID: 1446913428119254879}
+  _roadNodeAnimation: {fileID: 4047221392320981382}
   _isConnect: 0
 --- !u!114 &6669103067313334501
 MonoBehaviour:
@@ -83,6 +86,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxTiltAngle: 15
+--- !u!114 &4047221392320981382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951094140556641489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a39e2603ee846aba2c1d28f061ba6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1335293585523565178}
+--- !u!95 &1335293585523565178
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951094140556641489}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e86cd666e9127fe46a39d1d5ad766f6e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4636015333686122230
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,5 +11,6 @@ public static class AnimationData
         public static readonly int Rotate = Animator.StringToHash(nameof(Rotate));
         public static readonly int IsDie = Animator.StringToHash(nameof(IsDie));
         public static readonly int IsBroken = Animator.StringToHash(nameof(IsBroken));
+        public static readonly int ReadyToSelect = Animator.StringToHash(nameof(ReadyToSelect));
     }
 }
