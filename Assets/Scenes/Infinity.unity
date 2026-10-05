@@ -387,12 +387,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 902544232}
   _roadDrager: {fileID: 2078272741}
-  _grid: {fileID: 7839227580444044395}
   _allowedRotations:
   - {x: 0, y: 0, z: 0, w: 0}
   - {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   - {x: 0, y: 1, z: 0, w: -0.00000004371139}
   - {x: 0, y: 0.70710677, z: 0, w: -0.70710677}
+  _wallet: {fileID: 1315935313}
 --- !u!4 &116488888
 Transform:
   m_ObjectHideFlags: 0
@@ -453,7 +453,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1954852389}
+  m_Father: {fileID: 1152240259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -971,6 +971,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465928650}
+  - component: {fileID: 465928651}
   m_Layer: 5
   m_Name: 'RotationRoadBonusPriceForAdds '
   m_TagString: Untagged
@@ -998,6 +999,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2.3231, y: 0}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!225 &465928651
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465928649}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &475458306
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,6 +2655,8 @@ MonoBehaviour:
   _roadRotationBonus: {fileID: 116488887}
   _activationButton: {fileID: 228415878}
   _deactivationButton: {fileID: 2038127228}
+  _roadRotationBonusRender: {fileID: 1954852390}
+  _walletSaver: {fileID: 2045061259}
 --- !u!4 &790334596
 Transform:
   m_ObjectHideFlags: 0
@@ -3935,6 +3950,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6326271534049847125, guid: b4510ab16120fc8459cb366910d81972,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 228415872}
+    - targetCorrespondingSourceObject: {fileID: 6326271534049847125, guid: b4510ab16120fc8459cb366910d81972,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1954852389}
     - targetCorrespondingSourceObject: {fileID: 2937484693707693287, guid: b4510ab16120fc8459cb366910d81972,
         type: 3}
@@ -4349,6 +4368,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationName: Money shop
   FallbackText: "\u041C\u0410\u0413\u0410\u0417\u0418\u041D \u041C\u041E\u041D\u0415\u0422 "
+--- !u!1 &1315935312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315935315}
+  - component: {fileID: 1315935314}
+  - component: {fileID: 1315935313}
+  m_Layer: 0
+  m_Name: Wallet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1315935313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315935312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5cc2b3fa102bf4c8f1f32d25af463c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walletRender: {fileID: 1922412277}
+  _walletSaver: {fileID: 2045061259}
+--- !u!114 &1315935314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315935312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb6f174cbbdab047aed035cba5602ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1315935315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315935312}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.116985, y: 24.655386, z: -14.952645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327069052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4358,13 +4436,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1327069053}
+  - component: {fileID: 1327069054}
   m_Layer: 5
   m_Name: RotationRoadBonusFreeAttemps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1327069053
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4385,6 +4464,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!225 &1327069054
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327069052}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1346845341
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,13 +4945,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1530529830}
+  - component: {fileID: 1530529831}
   m_Layer: 5
   m_Name: RotationRoadBonusPriceForAttemps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1530529830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4882,6 +4974,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5198288, y: 0}
   m_SizeDelta: {x: -0.02774, y: 0}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!225 &1530529831
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530529829}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1532503354
 GameObject:
   m_ObjectHideFlags: 0
@@ -5632,6 +5736,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 707109439}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1922412277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1010052600768492899, guid: b4510ab16120fc8459cb366910d81972,
+    type: 3}
+  m_PrefabInstance: {fileID: 1152240257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776a4262a83d7e6489695abe0a2d9247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1937105429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,8 +5802,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954852389}
+  - component: {fileID: 1954852390}
   m_Layer: 5
-  m_Name: RotationRoadBonus
+  m_Name: RotationRoadBonusRender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5705,7 +5822,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 228415872}
   - {fileID: 1327069053}
   - {fileID: 1530529830}
   - {fileID: 465928650}
@@ -5716,6 +5832,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1954852390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954852388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ed38bc4cad46248fb0ab06722a8a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _freeItemCountText: {fileID: 1824915780}
+  _freeItemCountWindow: {fileID: 1327069054}
+  _costWindow: {fileID: 1530529831}
+  _offerAdds: {fileID: 465928651}
 --- !u!1 &1962974002
 GameObject:
   m_ObjectHideFlags: 0
@@ -6672,7 +6804,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.4
+  m_fontSize: 37.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7139,3 +7271,4 @@ SceneRoots:
   - {fileID: 541418819}
   - {fileID: 116488888}
   - {fileID: 790334596}
+  - {fileID: 1315935315}
