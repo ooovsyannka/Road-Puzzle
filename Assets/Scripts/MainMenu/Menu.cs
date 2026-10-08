@@ -29,8 +29,8 @@ public class Menu : MonoBehaviour
         _infinityButton.onClick.AddListener(LaunchInfinityLevel);
         _shopButton.onClick.AddListener(OpenShop);
 
-        //if(_levelHolder.TryGetLevelByIndex(out LevelData levelData))
-        if (_levelHolder.TryGetLevelBySaver(out LevelData levelData))
+       //  if(_levelHolder.TryGetLevelByIndex(out LevelData levelData))
+       if (_levelHolder.TryGetLevelBySaver(out LevelData levelData))
         {
             _currentLevel = levelData;
             _menuRender.ShowLevelNumber(_currentLevel.Index);

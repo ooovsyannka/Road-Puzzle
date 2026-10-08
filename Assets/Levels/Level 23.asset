@@ -26,8 +26,8 @@ MonoBehaviour:
     _rotation: {x: 0, y: 0, z: 0, w: 0}
   _hint:
     _hintImage: {fileID: 0}
-    _cost: 0
-  _timeOfDay: 0
+    _cost: 100
+  _timeOfDay: 1
   _timeForLevelInMinute: 0
   _timeForLevelInSeconds: 0
   _winCoinCount: 0

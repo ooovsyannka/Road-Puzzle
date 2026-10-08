@@ -108,10 +108,10 @@ MonoBehaviour:
     _rotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
   _hint:
     _hintImage: {fileID: 21300000, guid: 7de761959a2f3c94ba8467fa60922367, type: 3}
-    _cost: 30
+    _cost: 100
   _timeOfDay: 0
   _timeForLevelInMinute: 2
   _timeForLevelInSeconds: 0
   _winCoinCount: 300
-  _isComplete: 0
+  _isComplete: 1
   _procentageUnblockingCar: 0.25

@@ -21,7 +21,7 @@ public class CarProductSaver : MonoBehaviour
         _selectCarCount = PlayerPrefs.GetInt($"{SelectCarCount}");
     }
 
-    /*private void Update()
+    private void Update()
     {
         if (Input.GetKeyUp(KeyCode.S))
         {
@@ -46,7 +46,7 @@ public class CarProductSaver : MonoBehaviour
             PlayerPrefs.DeleteKey(ProcentageUnblockingCar);
             print("Процент удален");
         }
-    }*/
+    }
 
     public void SaveCarProduct(CarProduct carProduct)
     {
