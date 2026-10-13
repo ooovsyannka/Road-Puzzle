@@ -19,7 +19,7 @@ public class CarContainer : MonoBehaviour
     private bool _isOpen = false;
     private float _rotationSpeed = 45f;
     private Coroutine _smothlyZoom;
-    private float _targetPositionZ = -50f;
+    private float _targetPositionZ = -100f;
     private float _duration = 0.5f;
     private RectTransform _rectTransform;
 
