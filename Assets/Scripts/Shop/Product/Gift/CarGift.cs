@@ -4,12 +4,7 @@
 
 public class CarGift : CarProduct
 {
-    [SerializeField] private float _completedProcent;
+    [SerializeField] private Sprite _carGiftImage;
 
-    public float CompletedProcent => _completedProcent;
-
-    public void AddProcent(float procent)
-    {
-        _completedProcent += procent;
-    }
+    public Sprite CarGiftImage => _carGiftImage;
 }

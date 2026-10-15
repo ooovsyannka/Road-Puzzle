@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using IJunior.TypedScenes;
 using UnityEngine.UI;
-using System;
+
 
 public class Menu : MonoBehaviour
 {
@@ -9,12 +9,12 @@ public class Menu : MonoBehaviour
     [SerializeField] private Button _levelButton;
     [SerializeField] private Button _infinityButton;
     [SerializeField] private Button _shopButton;
-    [SerializeField] private Button _settingButton;
     [SerializeField] private Wallet _wallet;
     [SerializeField] private MenuRender _menuRender;
     [SerializeField] private Grid _infinityLevelGrid;
+    [SerializeField] private SceneLoader _sceneLoader;
 
-    private bool _canLoadScene;
+
     private LevelData _currentLevel;
 
     private void Start()
@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
 
     private void OnEnable()
     {
-        _canLoadScene = true;
+        
         _levelButton.onClick.AddListener(LaunchLevel);
         _infinityButton.onClick.AddListener(LaunchInfinityLevel);
         _shopButton.onClick.AddListener(OpenShop);
@@ -50,31 +50,18 @@ public class Menu : MonoBehaviour
 
     private void LaunchLevel()
     {
-        if (_currentLevel == null)
-        {
-            print("All levels complete");
-            return;
-        }
-
-        TryLoadScene(() => LevelScene.Load(_currentLevel));
+        _sceneLoader.TryLoadLevelScene(_currentLevel);
     }
 
     private void LaunchInfinityLevel()
     {
-        TryLoadScene(() => Infinity.Load());
+        _sceneLoader.TryLoadInfinityLevelScene();
+        
     }
 
     private void OpenShop()
     {
-        TryLoadScene(() => ShopScene.Load());
-    }
-
-    private void TryLoadScene(Action loadScene)
-    {
-        if (_canLoadScene == false)
-            return;
-
-        loadScene?.Invoke();
-        _canLoadScene = false;
+        _sceneLoader.TryLoasShopScene();
+       
     }
 }

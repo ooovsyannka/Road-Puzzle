@@ -15,4 +15,4 @@ MonoBehaviour:
   _carPrefab: {fileID: 721864092490790248, guid: 4f76238203c09bf47b3b97e8c361d2c7,
     type: 3}
   _index: 1
-  _completedProcent: 0
+  _carGiftImage: {fileID: 21300000, guid: 69e5360528c624d428d57b4ff4969af1, type: 3}

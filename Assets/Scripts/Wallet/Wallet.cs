@@ -15,7 +15,7 @@ public class Wallet : MonoBehaviour
         ShowWalletCount();
     }
 
-    public void AddCoin(int count)
+    public void AddCoins(int count)
     {
         LoadCoinsFromSave();
         _countCoin += count;
@@ -27,7 +27,7 @@ public class Wallet : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            AddCoin(1000);
+            AddCoins(1000);
         }
     }
 

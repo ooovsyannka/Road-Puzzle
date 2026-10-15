@@ -1,9 +1,12 @@
 ﻿using IJunior.TypedScenes;
+using UnityEngine;
 
 public class HomeButton : ActionButton
 {
+    [SerializeField] private SceneLoader _sceneLoader;
+
     protected override void OnButtonAction()
     {
-        MainMenu.Load();
+        _sceneLoader.TryLoadMainMenuScene();
     }
 }

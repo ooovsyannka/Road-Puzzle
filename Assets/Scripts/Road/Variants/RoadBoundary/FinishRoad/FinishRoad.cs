@@ -10,12 +10,6 @@ public class FinishRoad : RoadBoundary, IFinishRoad
 
     public event Action<IFinishRoad> OnConnected;
 
-
-    private void OnEnable()
-    {
-        Disconnect();
-    }
-
     public void Connect()
     {
         _roadRender.SetConnectRender();

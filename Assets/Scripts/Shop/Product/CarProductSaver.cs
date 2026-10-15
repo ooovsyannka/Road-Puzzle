@@ -5,7 +5,7 @@ public class CarProductSaver : MonoBehaviour
 {
     public List<CarContainer> carContainers;
     public CarProduct DefaultCarProduct;
-
+    private const string FirstLaunch = nameof(FirstLaunch);
     private const string OpenCar = nameof(OpenCar);
     private const string SelectCarCount = nameof(SelectCarCount);
     private const string SelectCar = nameof(SelectCar);
@@ -18,7 +18,22 @@ public class CarProductSaver : MonoBehaviour
 
     private void Awake()
     {
-        _selectCarCount = PlayerPrefs.GetInt($"{SelectCarCount}");
+        if (PlayerPrefs.GetInt(FirstLaunch, 0) == 0)
+        {
+            PlayerPrefs.SetInt(
+                $"{OpenCar} {DefaultCarProduct.Index}",
+                NumberPurchasedCar);
+
+            PlayerPrefs.SetInt(
+                $"{SelectCar} {DefaultCarProduct.Index}",
+                NumberPurchasedCar);
+
+            PlayerPrefs.SetInt(SelectCarCount, 1);
+            PlayerPrefs.SetInt(FirstLaunch, 1);
+            PlayerPrefs.Save();
+        }
+
+        _selectCarCount = PlayerPrefs.GetInt(SelectCarCount, 1);
     }
 
     private void Update()
@@ -63,8 +78,8 @@ public class CarProductSaver : MonoBehaviour
 
     public void SaveProcentageUnblockingCar(float procentage)
     {
-            float procentageToSave = GetProcentageUnblockingCar() + procentage;
-            PlayerPrefs.SetFloat(ProcentageUnblockingCar, procentageToSave);
+        float procentageToSave = GetProcentageUnblockingCar() + procentage;
+        PlayerPrefs.SetFloat(ProcentageUnblockingCar, procentageToSave);
     }
 
     public float GetProcentageUnblockingCar()
@@ -90,7 +105,7 @@ public class CarProductSaver : MonoBehaviour
         {
             CarGift currentGift = FindGift(currentIndex);
 
-            
+
             if (currentGift == null)
                 return null;
 
@@ -122,26 +137,26 @@ public class CarProductSaver : MonoBehaviour
         return Mathf.Clamp01(GetProcentageUnblockingCar());
     }
 
-    public bool AddProgressToCurrentRewardCar(float amount, out float displayedProgress)
+    public void AddProgressToCurrentRewardCar(float amount, out float displayedProgress)
     {
         CarGift currentGift = GetCurrentRewardCar();
+
         if (currentGift == null)
         {
             displayedProgress = GetProcentageUnblockingCar();
-            return false;
+            return;
         }
 
         displayedProgress = Mathf.Clamp01(GetProcentageUnblockingCar() + Mathf.Max(0f, amount));
         PlayerPrefs.SetFloat(ProcentageUnblockingCar, displayedProgress);
 
         if (displayedProgress < 1f)
-            return false;
+            return;
 
         SaveCarProduct(currentGift);
         PlayerPrefs.SetInt(CurrentRewardCarIndex, -1);
         PlayerPrefs.SetFloat(ProcentageUnblockingCar, 0f);
         displayedProgress = 1f;
-        return true;
     }
 
     public void DeletSelectCarProduct(CarProduct carProduct)

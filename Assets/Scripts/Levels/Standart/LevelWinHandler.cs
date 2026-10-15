@@ -5,6 +5,7 @@ public class LevelWinHandler : MonoBehaviour
 {
     private const int CoinsWhenAllGiftCarsAreUnlocked = 500;
 
+    [SerializeField] private Sprite _coinImage;
     [SerializeField] private LevelSaver _levelSaver;
     [SerializeField] private Wallet _wallet;
     [SerializeField] private TextMeshProUGUI _earnedCoinText;
@@ -33,11 +34,10 @@ public class LevelWinHandler : MonoBehaviour
         if (rewardCar != null)
         {
             _carProductSaver.AddProgressToCurrentRewardCar(procentageUnblockingCar, out float displayedProgress);
-            _procentageUnblockingCarRender.UpdateSlider(displayedProgress);
+            _procentageUnblockingCarRender.UpdateImage(displayedProgress, rewardCar.CarGiftImage);
         }
         else
         {
-            // Once every gift car is unlocked, completed progress converts to coins.
             _carProductSaver.SaveProcentageUnblockingCar(procentageUnblockingCar);
             float coinProgress = _carProductSaver.GetProcentageUnblockingCar();
 
@@ -48,11 +48,11 @@ public class LevelWinHandler : MonoBehaviour
                 coinProgress -= 1f;
             }
 
-            _procentageUnblockingCarRender.UpdateSlider(coinProgress);
+            _procentageUnblockingCarRender.UpdateImage(coinProgress, _coinImage);
         }
 
         int totalCoinCount = winCoinCount + bonusCoinCount;
-        _wallet.AddCoin(totalCoinCount);
+        _wallet.AddCoins(totalCoinCount);
         _earnedCoinText.text = totalCoinCount.ToString();
     }
 }

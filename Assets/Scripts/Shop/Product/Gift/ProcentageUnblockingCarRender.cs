@@ -4,12 +4,14 @@ using UnityEngine.UI;
 
 public class ProcentageUnblockingCarRender : MonoBehaviour
 {
-    [SerializeField] private Slider _slider;
+    [SerializeField] private Image _image;
+
     private float _duration = 1.25f;
     private Coroutine _fillCoroutine;
 
-    public void UpdateSlider(float value)
+    public void UpdateImage(float value, Sprite carGiftImage)
     {
+        _image.sprite = carGiftImage;
         FillTo(value);
     }
 
@@ -23,22 +25,22 @@ public class ProcentageUnblockingCarRender : MonoBehaviour
 
     private IEnumerator FillCoroutine(float targetValue)
     {
-        targetValue = Mathf.Clamp(targetValue, _slider.minValue, _slider.maxValue);
-
         float elapsed = 0f;
         float progress;
-        _slider.value = 0f;
-        
+        float smothlyFillCount;
+        _image.fillAmount = 0f;
+
         while (elapsed < _duration)
         {
             elapsed += Time.deltaTime;
             progress = Mathf.Clamp01(elapsed / _duration);
-            _slider.value = Mathf.Lerp(0f, targetValue, progress);
+            smothlyFillCount = Mathf.Lerp(0f, targetValue, progress);
+            _image.fillAmount = smothlyFillCount;
 
             yield return null;
         }
 
-        _slider.value = targetValue;
+        _image.fillAmount = targetValue;
         _fillCoroutine = null;
     }
 }
